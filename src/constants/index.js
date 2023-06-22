@@ -239,7 +239,7 @@ const projects = [
     source_code_link: "https://github.com/azhad947/chrom-extension.git/",
   },
   {
-    name: "3d Shirt",
+    name: "3d-Shirt",
     description: 
       "3DShirt model  to which you can change its color upload images as its logo or full body (Better on desktop screen) .",
     tags: [
