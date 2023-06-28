@@ -23,6 +23,9 @@ import {
   jobit,
   tripguide,
   threejs,
+  crypto,
+  shirt,
+  drum,
 } from "../assets";
 
 export const navLinks = [
@@ -215,8 +218,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: crypto,
     source_code_link: "https://github.com/azhad947/Crypto-X.git",
+    deploy: "https://crypto-x-gamma.vercel.app",
   },
   {
     name: "Chrome-extension",
@@ -256,8 +260,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: shirt, 
     source_code_link: "https://github.com/azhad947/three-js-react-project.git",
+    deploy:"https://3d-shirt-ochre.vercel.app",
   },
   {
     name: "Virtual-Drum",
@@ -277,7 +282,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: drum,
     source_code_link: "https://github.com/azhad947/Virtual-Drum.git",
   },
 ];

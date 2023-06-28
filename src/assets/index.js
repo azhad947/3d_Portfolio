@@ -29,6 +29,10 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import crypto from "./crypto.png";
+import shirt from "./shirt.png"
+import drum from "./drum.png"
+
 
 export {
   logo,
@@ -59,4 +63,7 @@ export {
   carrent,
   jobit,
   tripguide,
-};
+  crypto,
+  shirt,
+  drum,
+ };

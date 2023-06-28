@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github } from "../assets";
+import { github  } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -16,7 +16,7 @@ const ProjectCard = ({ index, name,
   description,
   tags,
   image,
-  source_code_link,
+  source_code_link,deploy,
 }) => {
   return(
 
@@ -26,7 +26,7 @@ const ProjectCard = ({ index, name,
         max: 45,
         scale: 1,
         speed:450
-      }} className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full' >
+      }} className='bg-tertiary mt-20 mb-20 p-5 rounded-2xl sm:w-[360px] w-full' >
         <div className='relative w-full h-[230px]'>
           <img
             src={image}
@@ -34,7 +34,7 @@ const ProjectCard = ({ index, name,
             className='w-full h-full object-cover rounded-2xl'
           />
 
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+          <div className='absolute inset-0 flex justify-end gap-1 m-3 card-img_hover'>
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
@@ -45,8 +45,17 @@ const ProjectCard = ({ index, name,
                 className='w-1/2 h-1/2 object-contain'
               />
             </div>
+            <div
+              onClick={() => window.open(deploy, "_blank")}
+              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+            >
+              <img
+                src="https://cdn2.iconfinder.com/data/icons/automation-testing-2/128/Automation_Testing_-_Flat_Style_-_14-09-512.png"
+                alt='deploy'
+                className='w-1/2 h-1/2 object-contain'
+              />
+            </div>
           </div>
-        </div>
 
         <div className='mt-5'>
           <h3 className='text-white font-bold text-[24px]'>{name}</h3>
@@ -70,7 +79,7 @@ const ProjectCard = ({ index, name,
             
             
           ))}
-          
+          </div>
         </div>
       </Tilt>
     </motion.div>
@@ -96,7 +105,7 @@ const Works = () => {
           and manage projects effectively.
         </motion.p>
       </div>
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-20 flex  flex-wrap gap-7">
         {projects.map((project, index) => (
           <ProjectCard  key={`project-${index}`} index={index}  {...project} />
         ))}
